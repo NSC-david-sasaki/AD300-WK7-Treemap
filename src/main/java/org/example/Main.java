@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Initializing Student Record Manager Demo");
@@ -22,9 +24,8 @@ public class Main {
         srm.displayAllRecords();
 
         System.out.println("Searching for student record by gpa threshold above 3.0");
-        srm.getRecordsByGpa(3.0);
-        srm.displayAllRecords();
-
+        List<Student> testList = srm.getRecordsByGpa(3.0);
+        System.out.println("Found:" + testList.toString());
         System.out.println("Quitting Demo");
     }
 }
